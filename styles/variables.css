@@ -1,0 +1,21 @@
+:root{
+/*шрифт*/
+--font-size-text:1rem ;
+--font-size-title-block: ;
+--font-size-title-main: clamp(2rem, 0.5643rem + 6.1256vw, 4.5rem);
+--font-size-title-block:  clamp(1.75rem, 1.3636rem + 1.8182vw, 3rem);
+--stat-title-font-size: clamp(1.5rem, 1.0693rem + 1.8377vw, 2.25rem);
+--font-family-text: 'Roboto';
+--font-family-title: 'OpenSans';
+--font-weight: 400;
+--line-height-main: 140%;
+--line-height:100% ;
+/*размер изображений*/
+--cover_images-width:  clamp(21.4375rem, 9.4137rem + 51.3017vw, 42.375rem);
+/*граница*/
+--border: 1px solid #000000;
+/*цвета*/
+--background-color-page:  #f2eeee;
+--background-color-form: #212529;
+--form_button-color: #FFFFFF;
+}

@@ -1,0 +1,365 @@
+/*страница*/
+.page{
+    min-inline-size: 320px;
+    min-block-size: 100dvb; 
+    margin-inline:  clamp(1rem, 0.4257rem + 2.4502vw, 2rem);
+    margin-block:20px ;
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+    background-color:  var(--background-color-page,  #f2eeee); 
+}
+/*стили для заголовков и текстов*/
+.article_block_text{
+    font-family: 'Roboto';
+    line-height: 140%;
+    font-size: var(--font-size-text,1rem);
+    font-weight: var(--font-weight, 400);
+}
+.article_block_title{
+    font-family:var(--font-family-title, 'OpenSans');
+    line-height: 100%;
+    font-size: var(--font-size-title-block, clamp(1.75rem, 1.3636rem + 1.8182vw, 3rem));
+    font-weight: var(--font-weight, 400);
+}
+/*шапка*/
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block-start: clamp(0.5rem, 0.3564rem + 0.6126vw, 0.75rem);
+    padding-block-end: clamp(1.25rem, 0.5322rem + 3.0628vw, 2.5rem);
+}
+.footer, header{
+    font-family: var(--font-family-text, 'Roboto');
+}
+/*БЛОК ОТКРЫТИЯ МЕНЮ*/
+.menu-button { 
+    display: block; 
+    width: 35px; 
+    height: 35px; 
+    border: none; 
+    padding: 0; 
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    transition: opacity 0.3s ease-in-out; 
+    cursor: pointer; 
+}
+/*стили когда кнопка открыта (после нажатия)*/
+.menu-button_type_open { 
+    background-image: url(../images/burger.svg); 
+}
+/*когда закрыта*/
+.menu-button_type_close { 
+    position: absolute; 
+    background-image: url(../images/burger.svg);
+    inset-block-start: 36px; 
+    inset-inline-end: 26px; 
+}
+/*стили при наведении на кнопку*/
+.menu-button:hover {
+    opacity: 0.6; 
+}
+/*меню*/
+.menu {  
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+}
+/*стили для меню*/
+.menu {
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  transition: translate 0.3s ease-in-out;
+  translate: 100%;
+}
+/**/
+.page_state_menu-open .menu {
+  translate: 0;
+}
+/*стили для всплывающего меню*/
+.menu_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  text-transform: uppercase;
+}
+.menu_list {
+  transition: transform 0.3s ease-in-out;
+}
+.menu_list:hover {
+  transform: scale(1.1);
+}
+/*стили при наведении на элементы списка*/
+.menu_link:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+.page_state_menu-open::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+.page_state_menu-open {
+  overflow: hidden;
+  touch-action: none; 
+}
+/*Входная секция*/
+.cover{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.cover_title{
+    font-size: var(--font-size-title-main, clamp(2rem, 0.5643rem + 6.1256vw, 4.5rem));
+    line-height: var(--line-height-main, 140%);
+    font-weight: var(--font-weight);
+    font-family: var(--font-family-title);
+}
+.cover_block{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.article_block_text_link{
+    font-size:  1.125rem;
+    font-family: var(--font-family-text, 'Roboto');
+}
+.cover_images{
+    width:  var(--cover_images-width,  clamp(21.4375rem, 9.4137rem + 51.3017vw, 42.375rem));
+}
+/*Блок о компании статистика*/
+.stats{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.stat-item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.stat-title{
+    font-size: var(--stat-title-font-size, clamp(1.5rem, 1.0693rem + 1.8377vw, 2.25rem));
+}
+/*блок как мы работает*/
+.article_section{
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+.article_section_list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.article_section_block{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: var(--border, 1px solid #000000);
+    padding-block-end:  clamp(1.25rem, 1.1064rem + 0.6126vw, 1.5rem);
+}
+/*блок проектов и блок отзывов*/
+.block_projects, .project_recall{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.25rem, 0.8193rem + 1.8377vw, 2rem);
+}
+.projects_images{
+    width:  clamp(15.75rem, 8.8228rem + 29.5559vw, 27.8125rem);
+}
+/*блок с отзывами*/
+.recall_article{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.recall_article_block{
+    border: var(--border, 1px solid #000000);
+    padding-inline:clamp(2rem, 1.7129rem + 1.2251vw, 2.5rem);
+    padding-block-end: clamp(2.25rem, 1.3886rem + 3.6753vw, 3.75rem);
+    padding-block-start:clamp(2rem, 1.7129rem + 1.2251vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 27px;
+}
+/*блок с формой*/
+.main_content_form{
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+.form_block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 42px;
+}
+.form_input{
+    border: none;
+    border-bottom: var(--border, 1px solid #000000);
+    width: 100%;
+    background-color: transparent;
+}
+.form_button{
+    padding: 12px 20px 12px 20px;
+    background-color: var(--background-color-form, #212529);
+    color: var(--form_button-color, #FFFFFF);
+    cursor: pointer;
+}
+/*форма кнопок эпл и гугл*/
+.form_loading{
+    display: flex;
+    gap: 8px;
+    margin-block-start: 20px;
+}
+.form_loading_button{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    background-color: #212529;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 3px 15px 3px 15px;
+    cursor: pointer;
+}
+/*подвал сайта*/
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.footer_link{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+.footer_link_social{
+    display: flex;
+    gap: 40px;
+}
+.footer_link_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.footer-copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.footer_info_item{
+    border-bottom:var(--border, 1px solid #000000);
+}
+/*медиазапрос при ширине просмотра экрана до 1024px*/
+@media(width <=1024px){
+.cover_images_text, .header_nav, .header__phone{
+  display: none;
+}
+/*блок фото с проектами*/
+.block_image{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-color: #8a7b7b #f0f0f0;
+}
+}
+/*медиазапрос при ширине просмотра экрана от 1025px*/
+@media (width >= 1025px) {
+.page{
+    min-width: 1350px;
+}
+.cover{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+}
+/*блок с заголовком и текстом*/
+.cover_block_text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+/*блок изображение и ссылки*/
+.cover_block{
+    align-items: flex-end;
+}
+/*блок о компании*/
+.article_section_type_about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 135px;
+}
+.stats{
+    grid-column: 2;
+}
+/*секция как мы работает*/
+.article_section_list {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 140px;
+}
+.article_section_block{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    min-width: 678px;
+}
+.article_section_block:first-child {
+    display: contents; 
+}
+.article_section_block:not(:first-child) {
+    grid-column: 2; 
+}
+/*блок проекты*/
+.block_image{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+/*блок отзывы*/
+.recall_article{
+    flex-direction: row;
+    gap: 21px;
+}
+/*блок формы*/
+.form{
+   display: grid;
+   align-items: center;
+   grid-template-columns: repeat(2,1fr);
+   gap: 136px;
+}
+.images_form {
+    background-image: url(../images/form_images.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 566px;
+}
+/*футер*/
+.footer{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.footer_link{
+    flex-direction: row;
+    gap: 200px;
+}
+.footer_link_info{
+    flex-direction: row;
+    gap: 16px;
+}}
