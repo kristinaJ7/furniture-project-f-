@@ -17,3 +17,5 @@
 
 ## Примечания
 Проект создан исключительно для  обучения.
+
+https://kristinaj7.github.io/furniture-project-f-/
